@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Recommendations - Movie Recommender{% endblock %}
+
+{% block content %}
+<h1 class="mt-5">Recommendations</h1>
+<p>Fuzzy Score: {{ fuzzy_score }}</p>
+<ul class="list-group mt-4">
+    {% for movie in suggestions %}
+        <li class="list-group-item">
+            <h5>{{ movie.title }} ({{ movie.genre }})</h5>
+            <p>Duration: {{ movie.duration }} minutes</p>
+            <p>Rating: {{ movie.average_rating }}</p>
+            <p>Release Year: {{ movie.release_year }}</p>
+<!--            <p>Director: {{ movie.director }}</p>-->
+        </li>
+    {% endfor %}
+</ul>
+<a href="/" class="btn btn-secondary mt-4">Back to Home</a>
+{% endblock %}
