@@ -1,0 +1,13 @@
+# Python
+*.pyc
+__pycache__/
+
+# Virtual Environment
+venv/
+venv/*
+
+# VS Code
+.vscode/
+
+# Other
+.DS_Store
